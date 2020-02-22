@@ -49,7 +49,28 @@ To test the deploy, in terminal do:
 ```
 git status
 git add .
-git commit -m "{your deploy title here}
+git commit -m "{your deploy title here}"
+```
+
+Since we added to shortcut commands to the .json script, we can run these last few commands for deployment:
+
+```
+npm run deploy
+```
+
+Then you'll have to put in your username and password, into the terminal.
+
+Last little bit!
+
+```
+git push -u origin master
+```
+
+Now anytime you make edits and want to check out how it looks, go ahead and run
+
+```
+npm run deploy
+git push -u origin master
 ```
 
 ## Organization and Structure
