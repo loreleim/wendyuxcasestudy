@@ -1,68 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Wendy UX Case Study
 
-## Available Scripts
+This search bar utilizes a structure with a store, and autocomplete based off of that store.
 
-In the project directory, you can run:
+## Creating a new react.js project
 
-### `npm start`
+```
+npx/npm create-react-app my-app
+cd my-app
+npm start
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+And then for scss management:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```
+npm install node-sass
+```
 
-### `npm test`
+## Set up github pages
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To set up gh-pages, run this in your terminal:
 
-### `npm run build`
+```
+npm install gh-pages --save-dev
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Then add these baddies to your package.json > "scripts":
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build",
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Also add above the app name:
 
-### `npm run eject`
+```
+"homepage": "https://{yourusername}.github.io/{thegithubreponame}"
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Sick! Now back in your terminal run a
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+git init
+git remote add origin https://github.com/{yourusername}/{thegithubreponame}.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To test the deploy, in terminal do:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+git status
+git add .
+git commit -m "{your deploy title here}
+```
 
-## Learn More
+## Organization and Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Within the src folder please create the following folders:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. components (place your reusable code here)
+2. images (.svg, .jpg, or storage .ai files)
+3. pages (index.js shall house your router)
+4. style (contains .scss files, index.scss shall be the main stylesheet)
 
-### Code Splitting
+Remove the following default files:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+1. serviceWorker (remove line 5 on the index.js file aka the service worker import, and line 12's service worker .register())
+2. setupTests
+3. logo.svg (remove the import on the App.js file, and the html reference in the render <img> tag)
+4. App.test.js
 
-### Analyzing the Bundle Size
+Now for some renaming, this repo follows a lowercase-lowercase naming convention. Folder files with two works shall be conjoined with a hyphen, -. .JS files with two works shall follow a lowercaseUppercase.js naming system. Rename the following default files:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+1. App.css to app.css (also move to an index.scss file in the style folder)
+2. App.js to app.js
 
-### Making a Progressive Web App
+Move into one file (index.css and app.css into styles > index.scss)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Installing
 
-### Advanced Configuration
+This project uses the node and npm ecosystem to build the tool. Before running or installing the
+project please download and run [node](https://nodejs.org/en/download/). You will then clone the
+following repository to your personal computer and run it through your code editor's terminal.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```
+npm install
+```
 
-### Deployment
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[MIT](https://choosealicense.com/licenses/mit/)
