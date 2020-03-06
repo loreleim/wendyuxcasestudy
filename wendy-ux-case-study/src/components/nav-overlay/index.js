@@ -1,11 +1,11 @@
 import React, { PureComponent } from "react";
 import { Link } from "react-router-dom";
-import style from "../nav/index.module.scss";
+import style from "./index.module.scss";
 
-export default class Nav extends PureComponent {
+export default class NavOverlay extends PureComponent {
   render() {
     return (
-      <header>
+      <div>
         <nav className={style.mainNav}>
           <ul>
             <li>
@@ -25,7 +25,7 @@ export default class Nav extends PureComponent {
             </li>
           </ul>
         </nav>
-      </header>
+      </div>
     );
   }
 }

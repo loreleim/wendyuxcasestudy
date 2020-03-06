@@ -1,15 +1,20 @@
 .mainNav {
-  height: 3rem;
-  background-color: #060606;
+  height: 80vh;
+  background-color: black;
   color: white;
   width: 100%;
-  display: flex;
   align-items: center;
   position: fixed;
-  bottom: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+  top: 0;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.mainNav.open {
+  transform: translateX(-100%);
 }
 
 .mainNav a {
@@ -19,16 +24,20 @@
 
 .mainNav li:hover {
   transition: 0.5s ease-in-out;
-  color: orange;
+  letter-spacing: 0.7rem;
 }
 
 .mainNav ul {
-  display: flex;
+  display: block;
   list-style: none;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .mainNav li {
-  padding: 0 0.5rem;
+  padding-bottom: 2rem;
   cursor: pointer;
 }
 
