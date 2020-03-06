@@ -6,6 +6,19 @@
   right: 0;
   margin: 1rem;
   cursor: pointer;
+
+  &:hover .innerCircle {
+    background-color: white;
+    transition: ease-in-out 0.4s;
+  }
+
+  &:hover .hamLineOne {
+    background-color: black;
+  }
+
+  &:hover .hamLineTwo {
+    background-color: black;
+  }
 }
 
 .outerCircle {
@@ -24,4 +37,24 @@
   height: 3.25rem;
   border-radius: 50%;
   border: 2px solid white;
+}
+
+.hamLineOne {
+  border: 2px solid white;
+  border-radius: 2rem;
+  width: 1.5rem;
+  height: 0.5rem;
+  position: fixed;
+  bottom: 3.25rem;
+  right: 2.25rem;
+}
+
+.hamLineTwo {
+  border: 2px solid white;
+  border-radius: 2rem;
+  width: 1.5rem;
+  height: 0.5rem;
+  position: fixed;
+  bottom: 2.25rem;
+  right: 2.25rem;
 }

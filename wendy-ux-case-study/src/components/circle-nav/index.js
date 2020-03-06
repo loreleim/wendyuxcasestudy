@@ -8,7 +8,10 @@ export default class CircleNav extends PureComponent {
       <header>
         <nav className={style.mainNav}>
           <div className={style.outerCircle}>
-            <div className={style.innerCircle}></div>
+            <div className={style.innerCircle}>
+              <span className={style.hamLineOne}></span>
+              <span className={style.hamLineTwo}></span>
+            </div>
           </div>
         </nav>
       </header>
