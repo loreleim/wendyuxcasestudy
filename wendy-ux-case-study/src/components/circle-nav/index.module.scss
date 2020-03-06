@@ -1,0 +1,27 @@
+.mainNav {
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.outerCircle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.innerCircle {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  border: 2px solid white;
+}

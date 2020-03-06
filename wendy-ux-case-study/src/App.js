@@ -6,11 +6,13 @@ import Planning from "./pages/planning/index.js";
 import Production from "./pages/production/index.js";
 import UserTesting from "./pages/user-testing/index.js";
 import Launch from "./pages/launch/index.js";
+import CircleNav from "./components/circle-nav/index.js";
 
 function App() {
   return (
     <div>
       <Router basename="/wendygoeshiking">
+        <CircleNav></CircleNav>
         <Switch>
           <Route path="/" exact component={Home}></Route>
           <Route path="/planning" component={Planning}></Route>
