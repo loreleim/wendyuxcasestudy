@@ -1,7 +1,7 @@
 .downloadContainer {
   cursor: pointer;
   height: 2rem;
-  width: 50vw;
+  width: 10rem;
   display: block;
   padding: 0 1rem;
   border-radius: 3rem;
@@ -13,6 +13,7 @@
   border: 0.1rem solid white;
   margin: 0 auto;
   letter-spacing: 0.2rem;
+  margin-top: 2rem;
 
   &:hover {
     color: black;
