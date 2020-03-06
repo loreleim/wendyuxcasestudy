@@ -11,7 +11,6 @@ function App() {
   return (
     <div>
       <Router basename="/wendygoeshiking">
-        <Nav></Nav>
         <Switch>
           <Route path="/" exact component={Home}></Route>
           <Route path="/planning" component={Planning}></Route>
