@@ -5,7 +5,11 @@ export default class CircleNav extends PureComponent {
   render() {
     return (
       <header>
-        <nav className={style.mainNav} onClick={this.props.drawerClickHandler}>
+        <nav
+          className={style.mainNav}
+          onClick={this.props.drawerClickHandler}
+          //style={{ transform: "translateY(" + this.props.chicken + "px)" }}
+        >
           <div className={style.outerCircle}>
             <div className={style.innerCircle}>
               <span className={style.hamLineOne}></span>

@@ -18,7 +18,10 @@ const App = withRouter(
     constructor(props) {
       super(props);
       this.state = {
-        showMenu: false
+        showMenu: false,
+        butthole: 0,
+        potato: "hidden",
+        rice: "0%"
       };
     }
 
@@ -30,33 +33,28 @@ const App = withRouter(
 
     onRouteChanged() {
       console.log("the route has been changed");
-      this.setState({ sideDrawerOpen: false });
+      this.setState({ butthole: 0 });
+      this.setState({ potato: "hidden" });
+      this.setState({ rice: "0%" });
     }
 
-    toggleClass() {
-      this.setState({ showMenu: !this.state.showMenu });
-    }
-
-    drawerToggleClickHandler = () => {
-      this.setState(prevState => {
-        return { sideDrawerOpen: !prevState.sideDrawerOpen };
-      });
+    toggleOverlay = () => {
+      this.setState({ butthole: 1 });
+      this.setState({ potato: "visible" });
+      this.setState({ rice: "85vh" });
     };
 
     render() {
-      let backdrop;
       const { location } = this.props;
       console.log(location);
-      if (this.state.sideDrawerOpen) {
-        backdrop = <NavOverlay></NavOverlay>;
-      }
-      console.log("the state of the overlay is: " + this.state.sideDrawerOpen);
       return (
         <div>
-          <CircleNav
-            drawerClickHandler={this.drawerToggleClickHandler}
-          ></CircleNav>
-          {backdrop}
+          <CircleNav drawerClickHandler={this.toggleOverlay}></CircleNav>
+          <NavOverlay
+            opacity={this.state.butthole}
+            visibility={this.state.potato}
+            height={this.state.rice}
+          ></NavOverlay>
           <Switch>
             <Route path="/" exact component={Home}></Route>
             <Route path="/planning" component={Planning}></Route>
