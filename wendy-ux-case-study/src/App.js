@@ -28,17 +28,9 @@ const App = withRouter(
       }
     }
 
-  render() {
-    let backdrop;
 
-    if (this.state.sideDrawerOpen) {
-      backdrop = <NavOverlay></NavOverlay>;
     }
 
-    console.log(this.state.sideDrawerOpen);
-    return (
-      <div>
-        <Router basename="/wendygoeshiking">
     drawerToggleClickHandler = () => {
       this.setState(prevState => {
         return { sideDrawerOpen: !prevState.sideDrawerOpen };
