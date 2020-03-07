@@ -22,11 +22,11 @@ const App = withRouter(
       };
     }
 
-  drawerToggleClickHandler = () => {
-    this.setState(prevState => {
-      return { sideDrawerOpen: !prevState.sideDrawerOpen };
-    });
-  };
+    componentDidUpdate(prevLocation) {
+      if (this.props.location !== prevLocation.location) {
+        this.onRouteChanged();
+      }
+    }
 
   render() {
     let backdrop;
