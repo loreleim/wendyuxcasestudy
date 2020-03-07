@@ -1,5 +1,4 @@
 import React, { PureComponent } from "react";
-import { Link } from "react-router-dom";
 import style from "../circle-nav/index.module.scss";
 
 export default class CircleNav extends PureComponent {
