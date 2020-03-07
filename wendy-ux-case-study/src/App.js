@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  withRouter
+} from "react-router-dom";
 import NavOverlay from "./components/nav-overlay";
 import Home from "./pages/home/index.js";
 import Planning from "./pages/planning/index.js";
@@ -36,6 +41,22 @@ class App extends Component {
     return (
       <div>
         <Router basename="/wendygoeshiking">
+    drawerToggleClickHandler = () => {
+      this.setState(prevState => {
+        return { sideDrawerOpen: !prevState.sideDrawerOpen };
+      });
+    };
+
+    render() {
+      let backdrop;
+      const { location } = this.props;
+      console.log(location);
+      if (this.state.sideDrawerOpen) {
+        backdrop = <NavOverlay></NavOverlay>;
+      }
+      console.log("the state of the overlay is: " + this.state.sideDrawerOpen);
+      return (
+        <div>
           <CircleNav
             drawerClickHandler={this.drawerToggleClickHandler}
           ></CircleNav>
@@ -47,10 +68,20 @@ class App extends Component {
             <Route path="/usertesting" component={UserTesting}></Route>
             <Route path="/launch" component={Launch}></Route>
           </Switch>
-        </Router>
-      </div>
+        </div>
+      );
+    }
+  }
+);
+
+class RoutedApp extends Component {
+  render() {
+    return (
+      <Router basename="/wendygoeshiking">
+        <App />
+      </Router>
     );
   }
 }
 
-export default App;
+export default RoutedApp;
