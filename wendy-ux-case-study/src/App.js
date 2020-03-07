@@ -13,16 +13,14 @@ import UserTesting from "./pages/user-testing/index.js";
 import Launch from "./pages/launch/index.js";
 import CircleNav from "./components/circle-nav/index.js";
 
-class App extends Component {
-  state = {
-    sideDrawerOpen: false
-  };
-
-  componentDidMount() {
-    console.log(
-      "this is the loaded state of the overlay: " + this.state.sideDrawerOpen
-    );
-  }
+const App = withRouter(
+  class App extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        showMenu: false
+      };
+    }
 
   drawerToggleClickHandler = () => {
     this.setState(prevState => {
