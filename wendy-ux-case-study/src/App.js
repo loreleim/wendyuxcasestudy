@@ -33,6 +33,8 @@ const App = withRouter(
       this.setState({ sideDrawerOpen: false });
     }
 
+    toggleClass() {
+      this.setState({ showMenu: !this.state.showMenu });
     }
 
     drawerToggleClickHandler = () => {
