@@ -28,6 +28,10 @@ const App = withRouter(
       }
     }
 
+    onRouteChanged() {
+      console.log("the route has been changed");
+      this.setState({ sideDrawerOpen: false });
+    }
 
     }
 
