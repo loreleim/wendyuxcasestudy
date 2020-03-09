@@ -7,6 +7,7 @@ class Launch extends React.Component {
       <div className={style.mainContainer}>
         <section className={style.heroContainer}>
           <h1>Launch</h1>
+          <p>coming soon</p>
         </section>
       </div>
     );
