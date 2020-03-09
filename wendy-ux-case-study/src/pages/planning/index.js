@@ -5,7 +5,10 @@ class Planning extends React.Component {
   render() {
     return (
       <div className={style.mainContainer}>
-        <div>Planning Page</div>
+        <section className={style.heroContainer}>
+          <h1>Planning</h1>
+          <p>coming soon</p>
+        </section>
       </div>
     );
   }
