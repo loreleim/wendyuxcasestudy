@@ -33,6 +33,9 @@ const App = withRouter(
 
     onRouteChanged() {
       console.log("the route has been changed");
+      this.setState(prevState => ({
+        isHit: !prevState.isHit
+      }));
       this.setState({ butthole: 0 });
       this.setState({ potato: "hidden" });
       this.setState({ rice: "0%" });
