@@ -5,7 +5,10 @@ class UserTesting extends React.Component {
   render() {
     return (
       <div className={style.mainContainer}>
-        <div>User Testing</div>
+        <section className={style.heroContainer}>
+          <h1>User Testing</h1>
+          <p>coming soon</p>
+        </section>
       </div>
     );
   }
