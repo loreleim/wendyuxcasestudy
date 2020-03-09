@@ -1,0 +1,34 @@
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+}
+
+.heroContainer {
+  width: 100%;
+  height: 100vh;
+  background: url(../../images/websiteTexture.svg) no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  overflow: auto;
+  text-align: center;
+}
+
+.heroContainer h1 {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-top: 45vh;
+}
+
+.heroContainer p {
+  color: white;
+}
