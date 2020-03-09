@@ -18,7 +18,7 @@ const App = withRouter(
     constructor(props) {
       super(props);
       this.state = {
-        showMenu: false,
+        isHit: true,
         butthole: 0,
         potato: "hidden",
         rice: "0%"
@@ -39,14 +39,22 @@ const App = withRouter(
     }
 
     toggleOverlay = () => {
-      this.setState({ butthole: 1 });
-      this.setState({ potato: "visible" });
-      this.setState({ rice: "85vh" });
+      const isHit = this.state.isHit;
+      this.setState(prevState => ({
+        isHit: !prevState.isHit
+      }));
+      if (isHit) {
+        this.setState({ butthole: 1 });
+        this.setState({ potato: "visible" });
+        this.setState({ rice: "85vh" });
+      } else {
+        this.setState({ butthole: 0 });
+        this.setState({ potato: "hidden" });
+        this.setState({ rice: "0%" });
+      }
     };
 
     render() {
-      const { location } = this.props;
-      console.log(location);
       return (
         <div>
           <CircleNav drawerClickHandler={this.toggleOverlay}></CircleNav>
