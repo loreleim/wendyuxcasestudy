@@ -10,6 +10,9 @@ class Home extends React.Component {
           <div className={style.mainTitleContainer}></div>
           <DownloadButton></DownloadButton>
         </section>
+        <section>
+          <div className={style.sectionContainer}></div>
+        </section>
       </div>
     );
   }
